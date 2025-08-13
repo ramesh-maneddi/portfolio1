@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramesh Maneddi - Java Backend Developer</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="fas fa-code me-2"></i>Ramesh Maneddi
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#hero"><i class="fas fa-home me-1"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about"><i class="fas fa-user me-1"></i>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills"><i class="fas fa-cogs me-1"></i>Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects"><i class="fas fa-project-diagram me-1"></i>Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class="fas fa-envelope me-1"></i>Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            Hi, I'm <span class="text-primary" th:text="${name}">Ramesh Maneddi</span>
+                        </h1>
+                        <h2 class="hero-subtitle" th:text="${title}">Java Backend Developer</h2>
+                        <p class="hero-description">
+                            Passionate about building robust and scalable backend systems with 
+                            <span class="highlight" th:text="${experience}">3+ years</span> of experience in Java and Spring Boot.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="/projects" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-eye me-2"></i>View My Work
+                            </a>
+                            <a href="/contact" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-envelope me-2"></i>Get In Touch
+                            </a>
+                        </div>
+                        <div class="hero-social mt-4">
+                            <a href="https://linkedin.com/in/ramesh-maneddi" class="social-link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/ramesh-maneddi" class="social-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:rameshmaneddi6@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <div class="floating-card">
+                            <i class="fab fa-java fa-3x text-primary mb-3"></i>
+                            <h5>Java Developer</h5>
+                            <p>Spring Boot Expert</p>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-database fa-3x text-success mb-3"></i>
+                            <h5>Database</h5>
+                            <p>MySQL, PostgreSQL</p>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="fas fa-cloud fa-3x text-info mb-3"></i>
+                            <h5>Cloud & DevOps</h5>
+                            <p>AWS, Docker, CI/CD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Quick Stats Section -->
+    <section class="stats-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-card">
+                        <i class="fas fa-calendar-alt fa-2x text-primary mb-3"></i>
+                        <h3 class="stat-number">3+</h3>
+                        <p class="stat-label">Years Experience</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-card">
+                        <i class="fas fa-project-diagram fa-2x text-success mb-3"></i>
+                        <h3 class="stat-number">10+</h3>
+                        <p class="stat-label">Projects Completed</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-card">
+                        <i class="fas fa-code fa-2x text-info mb-3"></i>
+                        <h3 class="stat-number">5+</h3>
+                        <p class="stat-label">Technologies</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-card">
+                        <i class="fas fa-coffee fa-2x text-warning mb-3"></i>
+                        <h3 class="stat-number">1000+</h3>
+                        <p class="stat-label">Cups of Coffee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Ramesh Maneddi. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://linkedin.com/in/ramesh-maneddi" class="text-light me-3" target="_blank">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    <a href="https://github.com/ramesh-maneddi" class="text-light me-3" target="_blank">
+                        <i class="fab fa-github fa-lg"></i>
+                    </a>
+                    <a href="mailto:rameshmaneddi6@gmail.com" class="text-light">
+                        <i class="fas fa-envelope fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script th:src="@{/js/script.js}"></script>
+</body>
+</html>
+
+
+    <!-- About Section -->
+    <section id="about" class="page-section">
+        <div class="container">
+            <h1 class="section-title">About Me</h1>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5">
+                    <div class="about-content">
+                        <h3 class="mb-4">Professional Summary</h3>
+                        <p class="lead" th:text="${summary}">
+                            A dedicated Java Backend Developer with 3 years of experience in developing and maintaining robust and scalable backend systems using Java and Spring Boot. Proficient in building RESTful APIs, handling databases, and implementing best practices in software development. Passionate about delivering high-quality code and solving complex problems in a collaborative environment.
+                        </p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i><strong>Location:</strong> Kakinada, Andhra Pradesh</li>
+                                    <li class="mb-2"><i class="fas fa-envelope text-primary me-2"></i><strong>Email:</strong> rameshmaneddi6@gmail.com</li>
+                                    <li class="mb-2"><i class="fas fa-phone text-primary me-2"></i><strong>Phone:</strong> +91 8309278773</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-calendar text-primary me-2"></i><strong>Experience:</strong> 3+ Years</li>
+                                    <li class="mb-2"><i class="fas fa-briefcase text-primary me-2"></i><strong>Position:</strong> Backend Developer</li>
+                                    <li class="mb-2"><i class="fas fa-graduation-cap text-primary me-2"></i><strong>Degree:</strong> MCA</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="about-image text-center">
+                        <div class="profile-card">
+                            <div class="profile-avatar">
+                                <i class="fas fa-user fa-5x text-primary"></i>
+                            </div>
+                            <h4 class="mt-3">Ramesh Maneddi</h4>
+                            <p class="text-muted">Java Backend Developer</p>
+                            <div class="social-links">
+                                <a href="https://linkedin.com/in/ramesh-maneddi" class="btn btn-outline-primary btn-sm me-2" target="_blank">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="https://github.com/ramesh-maneddi" class="btn btn-outline-dark btn-sm" target="_blank">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="experience-timeline">
+                        <div class="experience-item">
+                            <div class="experience-card">
+                                <div class="experience-header">
+                                    <h4>Junior Java Developer / Backend Developer</h4>
+                                    <span class="company">Miracle Software Systems, Inc</span>
+                                    <span class="duration">Apr 2022 - Present</span>
+                                    <span class="location">Vishakhapatnam</span>
+                                </div>
+                                <div class="experience-content">
+                                    <ul>
+                                        <li>Developed and maintained backend services and microservices using Java and Spring Boot, ensuring high performance and responsiveness.</li>
+                                        <li>Designed and implemented RESTful APIs to interface with front-end applications, enhancing functionality and user experience.</li>
+                                        <li>Collaborated with front-end developers, UX designers, and product managers to deliver seamless software solutions on time.</li>
+                                        <li>Conducted unit and integration testing using JUnit and Mockito to ensure code reliability and functionality.</li>
+                                        <li>Participated in code reviews, providing constructive feedback and improving overall code quality within the team.</li>
+                                        <li>Optimized database queries and backend processes, resulting in significant reduction in load times and improved system efficiency.</li>
+                                        <li>Implemented security best practices in API development, ensuring data protection and compliance with industry standards.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h4>Master of Computer Applications (MCA)</h4>
+                            <span class="university">Jawaharlal Nehru Technological University, Kakinada</span>
+                            <span class="duration">2018 - 2021</span>
+                        </div>
+                        <div class="education-content">
+                            <p><strong>Relevant Courses:</strong></p>
+                            <div class="course-tags">
+                                <span class="tech-tag">Data Structures</span>
+                                <span class="tech-tag">Algorithms</span>
+                                <span class="tech-tag">Software Engineering</span>
+                                <span class="tech-tag">Database Management Systems</span>
+                                <span class="tech-tag">Web Development</span>
+                                <span class="tech-tag">Programming Languages</span>
+                                <span class="tech-tag">Network Security</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="page-section">
+        <div class="container">
+            <h1 class="section-title">My Skills</h1>
+            
+            <!-- Programming Languages -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="mb-4"><i class="fas fa-code text-primary me-2"></i>Programming Languages & Web Technologies</h3>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-java skill-icon text-danger"></i>
+                        <h5>Java</h5>
+                        <p class="text-muted">Advanced</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-database skill-icon text-primary"></i>
+                        <h5>SQL</h5>
+                        <p class="text-muted">Advanced</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-html5 skill-icon text-warning"></i>
+                        <h5>HTML</h5>
+                        <p class="text-muted">Intermediate</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="75%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-js-square skill-icon text-warning"></i>
+                        <h5>JavaScript</h5>
+                        <p class="text-muted">Intermediate</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frameworks & Libraries -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="mb-4"><i class="fas fa-layer-group text-success me-2"></i>Frameworks & Libraries</h3>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-leaf skill-icon text-success"></i>
+                        <h5>Spring Boot</h5>
+                        <p class="text-muted">Expert</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="95%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-tasks skill-icon text-info"></i>
+                        <h5>Spring Batch</h5>
+                        <p class="text-muted">Advanced</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-link skill-icon text-primary"></i>
+                        <h5>Spring JPA</h5>
+                        <p class="text-muted">Advanced</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-cube skill-icon text-secondary"></i>
+                        <h5>J2EE</h5>
+                        <p class="text-muted">Intermediate</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="mb-4"><i class="fas fa-server text-info me-2"></i>Databases</h3>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-database skill-icon text-primary"></i>
+                        <h5>MySQL</h5>
+                        <p class="text-muted">Advanced</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-database skill-icon text-info"></i>
+                        <h5>PostgreSQL</h5>
+                        <p class="text-muted">Advanced</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-leaf skill-icon text-success"></i>
+                        <h5>MongoDB</h5>
+                        <p class="text-muted">Intermediate</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="70%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-database skill-icon text-secondary"></i>
+                        <h5>H2 Database</h5>
+                        <p class="text-muted">Intermediate</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DevOps & Tools -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="mb-4"><i class="fas fa-tools text-warning me-2"></i>DevOps & Tools</h3>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-git-alt skill-icon text-danger"></i>
+                        <h5>Git</h5>
+                        <p class="text-muted">Advanced</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-docker skill-icon text-primary"></i>
+                        <h5>Docker</h5>
+                        <p class="text-muted">Intermediate</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="75%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-cogs skill-icon text-secondary"></i>
+                        <h5>Maven</h5>
+                        <p class="text-muted">Advanced</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-rocket skill-icon text-info"></i>
+                        <h5>Jenkins</h5>
+                        <p class="text-muted">Intermediate</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cloud & Testing -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="mb-4"><i class="fas fa-cloud text-info me-2"></i>Cloud & Testing</h3>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-aws skill-icon text-warning"></i>
+                        <h5>AWS EC2</h5>
+                        <p class="text-muted">Intermediate</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="70%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-vial skill-icon text-success"></i>
+                        <h5>JUnit</h5>
+                        <p class="text-muted">Advanced</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-bug skill-icon text-danger"></i>
+                        <h5>Mockito</h5>
+                        <p class="text-muted">Advanced</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-chart-line skill-icon text-primary"></i>
+                        <h5>SonarQube</h5>
+                        <p class="text-muted">Intermediate</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="65%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Methodologies -->
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="mb-4"><i class="fas fa-project-diagram text-primary me-2"></i>Methodologies & Interests</h3>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-sync-alt skill-icon text-success"></i>
+                        <h5>Agile (Scrum)</h5>
+                        <p class="text-muted">Advanced</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-tasks skill-icon text-info"></i>
+                        <h5>Kanban</h5>
+                        <p class="text-muted">Intermediate</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="75%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-react skill-icon text-primary"></i>
+                        <h5>React.js</h5>
+                        <p class="text-muted">Learning</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="60%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-stream skill-icon text-warning"></i>
+                        <h5>Microservices</h5>
+                        <p class="text-muted">Advanced</p>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-width="80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="page-section">
+        <div class="container">
+            <h1 class="section-title">My Projects</h1>
+            <p class="text-center text-muted mb-5">Here are some of the key projects I\'ve worked on during my career as a Backend Developer</p>
+            
+            <!-- Project 1: ServicesBay -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="project-card">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <div class="project-image">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="project-content">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h3 class="project-title">ServicesBay</h3>
+                                        <span class="badge bg-success">2022 - Present</span>
+                                    </div>
+                                    
+                                    <p class="project-description">
+                                        A comprehensive web application designed as a recruitment platform, serving as a bridge between vendors/recruiters, customers, and job seekers in the county. This platform streamlines the hiring process and connects talent with opportunities efficiently.
+                                    </p>
+                                    
+                                    <div class="project-tech mb-3">
+                                        <span class="tech-tag">Java</span>
+                                        <span class="tech-tag">Spring Boot</span>
+                                        <span class="tech-tag">MySQL</span>
+                                        <span class="tech-tag">RESTful APIs</span>
+                                        <span class="tech-tag">Maven</span>
+                                        <span class="tech-tag">JUnit</span>
+                                        <span class="tech-tag">Email Notifications</span>
+                                    </div>
+                                    
+                                    <div class="project-responsibilities">
+                                        <h5><i class="fas fa-tasks text-primary me-2"></i>Key Responsibilities:</h5>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check text-success me-2"></i>Built and maintained backend services using Java and Spring Boot for user authentication, job postings, and application management</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Developed RESTful APIs for frontend-backend communication, enabling job searches, candidate applications, and recruiter management</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Designed and optimized MySQL database schema for efficient storage and retrieval of job listings, user profiles, and application data</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Implemented comprehensive unit and integration testing using JUnit to ensure application reliability</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="project-impact mt-3">
+                                        <h6><i class="fas fa-chart-line text-info me-2"></i>Impact:</h6>
+                                        <p class="text-muted">Successfully connected hundreds of job seekers with potential employers, streamlining the recruitment process and improving hiring efficiency in the region.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Mcafe -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="project-card">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <div class="project-image">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="project-content">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h3 class="project-title">Mcafe (Internal Project)</h3>
+                                        <span class="badge bg-primary">2022 - Present</span>
+                                    </div>
+                                    
+                                    <p class="project-description">
+                                        A comprehensive mobile application for streamlined employee expense management, covering expenses like food, accommodation, travel, meetings, and events. Features hierarchy-based tracking for managers, real-time notifications, and report generation with a user-friendly interface.
+                                    </p>
+                                    
+                                    <div class="project-tech mb-3">
+                                        <span class="tech-tag">Java</span>
+                                        <span class="tech-tag">Spring Boot</span>
+                                        <span class="tech-tag">MySQL</span>
+                                        <span class="tech-tag">RESTful APIs</span>
+                                        <span class="tech-tag">Maven</span>
+                                        <span class="tech-tag">JUnit</span>
+                                        <span class="tech-tag">Microservices</span>
+                                        <span class="tech-tag">Kafka</span>
+                                        <span class="tech-tag">Firebase</span>
+                                        <span class="tech-tag">SMS Services</span>
+                                    </div>
+                                    
+                                    <div class="project-responsibilities">
+                                        <h5><i class="fas fa-tasks text-primary me-2"></i>Key Responsibilities:</h5>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fas fa-check text-success me-2"></i>Built and maintained backend services using Java and Spring Boot for expense submission, tracking, and approval processes</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Developed RESTful APIs for mobile frontend communication, enabling expense submission, real-time status updates, and hierarchy-based approval workflows</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Designed and optimized MySQL database schema for expense records, user profiles, approval hierarchies, and reporting data</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Implemented microservices architecture with Kafka for efficient inter-service communication</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Integrated Firebase push notifications and SMS services for real-time updates</li>
+                                            <li><i class="fas fa-check text-success me-2"></i>Comprehensive testing using JUnit for reliability and functionality assurance</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="project-features mt-3">
+                                        <h6><i class="fas fa-star text-warning me-2"></i>Key Features:</h6>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Real-time expense tracking</li>
+                                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Hierarchy-based approvals</li>
+                                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Push notifications</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Automated report generation</li>
+                                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Multi-category expense support</li>
+                                                    <li><i class="fas fa-arrow-right text-primary me-2"></i>Mobile-first design</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="project-impact mt-3">
+                                        <h6><i class="fas fa-chart-line text-info me-2"></i>Impact:</h6>
+                                        <p class="text-muted">Significantly improved expense management efficiency for employees and managers, reducing processing time by 60% and enhancing transparency in the approval workflow.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Projects Section -->
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center mb-4">Other Notable Work</h3>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card h-100">
+                        <div class="project-image">
+                            <i class="fas fa-api"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">RESTful API Development</h4>
+                            <p class="project-description">
+                                Designed and implemented numerous RESTful APIs for various client applications, ensuring scalability, security, and optimal performance.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">REST</span>
+                                <span class="tech-tag">JSON</span>
+                                <span class="tech-tag">Swagger</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card h-100">
+                        <div class="project-image">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Database Optimization</h4>
+                            <p class="project-description">
+                                Optimized database queries and backend processes, resulting in significant reduction in load times and improved system efficiency.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Query Optimization</span>
+                                <span class="tech-tag">Indexing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card h-100">
+                        <div class="project-image">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Security Implementation</h4>
+                            <p class="project-description">
+                                Implemented security best practices in API development, ensuring data protection and compliance with industry standards.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Spring Security</span>
+                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">OAuth</span>
+                                <span class="tech-tag">Encryption</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="page-section">
+        <div class="container">
+            <h1 class="section-title">Get In Touch</h1>
+            <p class="text-center text-muted mb-5">I\"m always interested in new opportunities and collaborations. Feel free to reach out!</p>
+            
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-lg-4 mb-5">
+                    <div class="contact-info">
+                        <h3 class="mb-4">Contact Information</h3>
+                        
+                        <!-- Success Message -->
+                        <div th:if="${successMessage}" class="alert alert-success alert-dismissible fade show" role="alert">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <span th:text="${successMessage}"></span>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Location</h5>
+                                <p>Andhra Pradesh, Kakinada, 533435</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Phone</h5>
+                                <p><a href="tel:+918309278773">+91 8309278773</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Email</h5>
+                                <p><a href="mailto:rameshmaneddi6@gmail.com">rameshmaneddi6@gmail.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item mb-4">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>WhatsApp</h5>
+                                <p><a href="https://wa.me/918309278773" target="_blank">+91 8309278773</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links mt-4">
+                            <h5 class="mb-3">Follow Me</h5>
+                            <a href="https://linkedin.com/in/ramesh-maneddi" class="social-link-contact me-3" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/ramesh-maneddi" class="social-link-contact me-3" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://wa.me/918309278773" class="social-link-contact" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <h3 class="mb-4">Send Me a Message</h3>
+                        
+                        <!-- Success Message -->
+                        <div th:if="${successMessage}" class="alert alert-success alert-dismissible fade show" role="alert">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <span th:text="${successMessage}"></span>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        
+                        <form id="contactForm" method="post" action="/contact">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <select class="form-control" id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="job-opportunity">Job Opportunity</option>
+                                    <option value="project-collaboration">Project Collaboration</option>
+                                    <option value="consultation">Consultation</option>
+                                    <option value="general-inquiry">General Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Tell me about your project or inquiry..." required></textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="privacy" name="privacy" required>
+                                    <label class="form-check-label" for="privacy">
+                                        I agree to the privacy policy and terms of service *
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </form>
+                        
+                        <div id="formMessage" class="mt-3" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-4">Ready to Work Together?</h2>
+            <p class="lead mb-4">I\"m always excited to take on new challenges and collaborate on innovative projects.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <div class="cta-card">
+                        <i class="fas fa-briefcase fa-2x text-primary mb-3"></i>
+                        <h5>Job Opportunities</h5>
+                        <p>Looking for a dedicated Java Backend Developer? Let\"s discuss how I can contribute to your team.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="cta-card">
+                        <i class="fas fa-handshake fa-2x text-success mb-3"></i>
+                        <h5>Project Collaboration</h5>
+                        <p>Have an interesting project? I\"d love to collaborate and bring your ideas to life.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="cta-card">
+                        <i class="fas fa-comments fa-2x text-info mb-3"></i>
+                        <h5>Technical Consultation</h5>
+                        <p>Need advice on backend architecture or Spring Boot implementation? I\"m here to help.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
