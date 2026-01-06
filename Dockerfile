@@ -18,5 +18,5 @@ VOLUME /tmp
 
 # Copy the JAR from the build stage
 COPY --from=build /app/target/*.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-Xmx512m","-Dserver.port=${PORT:8080}","-jar","/app.jar"]
 EXPOSE 8080
