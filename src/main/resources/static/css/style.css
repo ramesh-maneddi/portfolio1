@@ -63,6 +63,9 @@ body {
     position: relative;
     overflow: hidden;
     padding-top: 80px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .hero-overlay {
@@ -461,6 +464,14 @@ body {
     .hero-image {
         height: auto;
         margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .floating-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
     }
     
     .section-title {

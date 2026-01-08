@@ -1,0 +1,36 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.8)
+
+2026-01-08T03:52:17.989-05:00  INFO 6974 --- [demo] [           main] com.demo.demo.DemoApplication            : Starting DemoApplication v0.0.1-SNAPSHOT using Java 17.0.17 with PID 6974 (/home/ubuntu/portfolio1/target/demo-0.0.1-SNAPSHOT.jar started by ubuntu in /home/ubuntu/portfolio1)
+2026-01-08T03:52:17.993-05:00  INFO 6974 --- [demo] [           main] com.demo.demo.DemoApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-01-08T03:52:19.044-05:00  INFO 6974 --- [demo] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-08T03:52:19.061-05:00  INFO 6974 --- [demo] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-08T03:52:19.062-05:00  INFO 6974 --- [demo] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-01-08T03:52:19.110-05:00  INFO 6974 --- [demo] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-08T03:52:19.112-05:00  INFO 6974 --- [demo] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1060 ms
+2026-01-08T03:52:19.237-05:00  INFO 6974 --- [demo] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-01-08T03:52:19.528-05:00  INFO 6974 --- [demo] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-01-08T03:52:19.656-05:00  INFO 6974 --- [demo] [           main] com.demo.demo.DemoApplication            : Started DemoApplication in 1.996 seconds (process running for 2.645)
+2026-01-08T03:52:25.874-05:00  INFO 6974 --- [demo] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-08T03:52:25.874-05:00  INFO 6974 --- [demo] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-08T03:52:25.876-05:00  INFO 6974 --- [demo] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-08T03:52:25.902-05:00  WARN 6974 --- [demo] [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-01-08T03:52:27.798-05:00  WARN 6974 --- [demo] [nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-01-08T03:52:29.798-05:00  WARN 6974 --- [demo] [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-01-08T03:52:31.798-05:00  WARN 6974 --- [demo] [nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-01-08T03:52:33.798-05:00  WARN 6974 --- [demo] [nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-01-08T03:52:35.798-05:00  WARN 6974 --- [demo] [io-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-01-08T03:52:37.798-05:00  WARN 6974 --- [demo] [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-01-08T03:52:39.798-05:00  WARN 6974 --- [demo] [nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-01-08T03:52:41.797-05:00  WARN 6974 --- [demo] [nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-01-08T03:52:43.798-05:00  WARN 6974 --- [demo] [nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-01-08T03:52:45.798-05:00  WARN 6974 --- [demo] [nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-01-08T03:52:47.796-05:00  WARN 6974 --- [demo] [nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-01-08T03:52:49.796-05:00  WARN 6974 --- [demo] [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
